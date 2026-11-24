@@ -1,0 +1,139 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height:100%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1{
+    height:100%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+#page1 #circle{
+height: 400px;
+width: 400px;
+ box-shadow: 10px 10px 60px black;
+background: conic-gradient(
+    red,
+    blue,
+    green,
+    yellow,
+    brown,
+    orange,
+    pink,
+    lightseagreen,
+    black
+);
+border-radius: 50%;
+  animation: spinner 2s linear 1s infinite forwards;
+
+}
+
+#circle #overlay{
+height: 100%;
+width:100%;
+border-radius: 50%;
+background-color: rgb(242, 244, 246);
+scale: 0;
+transition: all ease 2s;
+display: flex;
+align-items: center;
+justify-content: center;
+animation: spinner 2s  ;
+}
+
+#circle:hover #overlay{
+    scale:1;
+    transition: all ease 2s;
+}
+
+
+@keyframes spinner{
+    from{
+        rotate: 360 deg;
+    }
+  
+   to{
+rotate: 360 deg;
+   }
+}
+
+#main #page2 {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+
+#page2 #box{
+    height: 400px;
+    width: 400px;
+    background-color: bisque;
+    background-image:url(https://images.unsplash.com/photo-1791395026796-6f2306503e0e?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDE%3D);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  animation: move 2s linear 1s infinite forwards;
+}
+
+#box #boxHover{
+  height: 50%;
+  width: 100%;
+  background-color: rgba(7, 7, 7, 0.603);
+  position:absolute;
+  bottom: -50%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  padding-left: 20px;
+  color: white;
+  transition: all ease 0.5s;
+}
+
+#box:hover #boxHover{
+bottom: 0%;
+transition: all ease 0.5s ;
+}
+
+@keyframes move{
+     from{
+        left: 0%;
+      transition: all ease 1s;
+      border-radius: 0%;
+    }
+  
+   to{
+left: 40%;
+transition: all ease 2s;
+border-radius: 50%;
+   }
+
+}
+
+#main{
+    
+}
